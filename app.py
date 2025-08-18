@@ -508,7 +508,7 @@ else:
 llm = ChatGoogleGenerativeAI(
     model= "gemini-2.5-pro",
     temperature=0,
-    google_api_key=os.getenv("GOOGLE_API_KEY")
+    google_api_key=os.getenv("API_KEY")
 )
 
 # Tools list for agent (LangChain tool decorator returns metadata for the LLM)
@@ -886,3 +886,4 @@ async def analyze_get_info():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
+
